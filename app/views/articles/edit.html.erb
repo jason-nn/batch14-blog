@@ -1,3 +1,9 @@
-<h1>Edit Article</h1>
+<div class="back">
+  <span class="material-icons">keyboard_arrow_left</span>
+  <%= link_to 'Back', article_path(@article) %>
+</div>
+<div class="header-container">
+  <div class="header">Edit Article</div>
+  <div class="subtext">Update an existing article</div>
+</div>
 <%= render 'form', article: @article %>
-<p><%= link_to 'Back', article_path(@article) %></p>
