@@ -1,7 +1,11 @@
 <div class="header-container">
   <div class="header">Articles</div>
   <div class="subtext">
-    <%= "#{@articles.length} articles" %>
+    <% if @articles.length == 1 %>
+      <%= "#{@articles.length} article" %>
+    <% else %>
+      <%= "#{@articles.length} articles" %>
+    <% end %>
   </div>
   <button><%= link_to 'New Article', new_article_path %></button>
 </div>

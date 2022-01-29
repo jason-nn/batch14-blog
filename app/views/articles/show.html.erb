@@ -30,7 +30,11 @@
     <div class="header-container">
       <div class="header">Comments</div>
       <div class="subtext">
-        <%= "#{@article.comments.length} comments" %>
+        <% if @articles.length == 1 %>
+          <%= "#{@article.comments.length} comment" %>
+        <% else %>
+          <%= "#{@article.comments.length} comments" %>
+        <% end %>
       </div>
       <button><%= link_to 'New Comment', new_article_comment_path(@article) %></button>
     </div>
