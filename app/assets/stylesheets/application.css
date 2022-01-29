@@ -14,6 +14,35 @@
  *= require_self
  */
 
+@font-face {
+  font-family: SF-Pro-Display-Semibold;
+  src: url(SF-Pro-Display-Semibold.otf);
+}
+
+@font-face {
+  font-family: SF-Pro-Display-Regular;
+  src: url(/SF-Pro-Display-Regular.otf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  color: #1d1d1f;
+  scroll-behavior: smooth;
+}
+
 .error {
   color: red;
 }
+
+/* 
+
+font-family: 'SF-Pro-Display-Semibold', Helvetica, sans-serif;
+
+color: #1d1d1f;
+background-color: #f5f5f7;
+color: #0066cc;
+
+*/
