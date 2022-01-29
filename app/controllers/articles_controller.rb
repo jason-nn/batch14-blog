@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
                                only: :destroy
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order(id: :desc)
   end
 
   def show
