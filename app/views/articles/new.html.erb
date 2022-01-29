@@ -1,0 +1,29 @@
+<h1>New Article</h1>
+<%= form_with model: @article do |form| %>
+  <div>
+    <%= form.label :title %>
+    <br>
+    <%= form.text_field :title %>
+    <% @article.errors.full_messages_for(:title).each do |message| %>
+      <div class="error">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <div>
+    <%= form.label :body %>
+    <br>
+    <%= form.text_area :body %>
+    <% @article.errors.full_messages_for(:body).each do |message| %>
+      <div class="error">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+<p><%= link_to 'Back', articles_path %></p>
