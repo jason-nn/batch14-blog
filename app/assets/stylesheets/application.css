@@ -151,13 +151,9 @@ textarea:focus {
 
   color: #71717a;
   margin-top: 10px;
-}
 
-.subtext pre {
-  font-family: CircularStd-Medium;
-  font-size: 14px;
-
-  color: #71717a;
+  display: flex;
+  gap: 10px;
 }
 
 .header-container {
@@ -247,12 +243,13 @@ textarea:focus {
 }
 
 .article-body {
-  margin-bottom: 60px;
+  margin-top: 60px;
+  margin-bottom: 90px;
   font-family: CircularStd-Book;
   font-size: 16px;
 }
 
-.form {
+.card {
   background-color: white;
   border-radius: 4px;
   padding: 30px;
