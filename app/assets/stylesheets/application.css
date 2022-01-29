@@ -273,3 +273,28 @@ textarea:focus {
 .comments textarea {
   height: 100px;
 }
+
+.comment {
+  padding: 15px 0px;
+  display: flex;
+  border-top: 1px solid #f4f4f5;
+}
+
+.profile {
+  background-color: #4f42ec;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  margin-right: 15px;
+}
+
+.name {
+  font-family: CircularStd-Bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.comment-body {
+  font-family: CircularStd-Book;
+  font-size: 16px;
+}

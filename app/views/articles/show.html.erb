@@ -32,8 +32,15 @@
       <div class="subtext">View and manage all comments</div>
     </div>
     <% @article.comments.each do |comment| %>
-      <%= comment.commenter %>
-      <%= comment.body %>
+      <div class="comment">
+        <div class="profile"></div>
+        <div>
+          <div class="name"><%= comment.commenter %></div>
+          <div class="comment-body">
+            <%= comment.body %>
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
   <div class="spacing"></div>
