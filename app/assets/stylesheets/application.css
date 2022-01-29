@@ -153,6 +153,13 @@ textarea:focus {
   margin-top: 10px;
 }
 
+.subtext pre {
+  font-family: CircularStd-Medium;
+  font-size: 14px;
+
+  color: #71717a;
+}
+
 .header-container {
   position: relative;
   margin-bottom: 30px;

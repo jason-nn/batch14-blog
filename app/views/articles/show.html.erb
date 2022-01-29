@@ -7,7 +7,7 @@
     <%= @article.title %>
   </div>
   <div class="subtext">
-    <%= @article.created_at.strftime("%B %d, %Y") %>
+    <pre><%= @article.created_at.in_time_zone(8).strftime("%B %d, %Y          %I:%M %p") %></pre>
   </div>
 </div>
 <div class="article-body">
