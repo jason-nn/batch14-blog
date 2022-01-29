@@ -24,3 +24,53 @@
     </span>
   </div>
 </div>
+<div class="spacing"></div>
+<div class="comments">
+  <div class="card">
+    <div class="header-container">
+      <div class="header">Comments</div>
+      <div class="subtext">View and manage all comments</div>
+    </div>
+    <% @article.comments.each do |comment| %>
+      <%= comment.commenter %>
+      <%= comment.body %>
+    <% end %>
+  </div>
+  <div class="spacing"></div>
+  <div class="card">
+    <div class="header-container">
+      <div class="header">Add comment</div>
+      <div class="subtext">Create a new comment</div>
+    </div>
+    <%= form_with model: [@article, @article.comments.build] do |form| %>
+      <div>
+        <p>
+          <%= form.label :commenter %>
+        </p>
+        <%= form.text_field :commenter %>
+        <% @article.errors.full_messages_for(:commenter).each do |message| %>
+          <div class="error">
+            <%= message %>
+          </div>
+        <% end %>
+      </div>
+      <div class="spacing"></div>
+      <div>
+        <p>
+          <%= form.label :body %>
+        </p>
+        <%= form.text_area :body %>
+        <% @article.errors.full_messages_for(:body).each do |message| %>
+          <div class="error">
+            <%= message %>
+          </div>
+        <% end %>
+      </div>
+      <div class="spacing"></div>
+      <div>
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="spacing"></div>

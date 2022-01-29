@@ -243,8 +243,8 @@ textarea:focus {
 }
 
 .article-body {
-  margin-top: 60px;
-  margin-bottom: 90px;
+  margin-top: 30px;
+  margin-bottom: 60px;
   font-family: CircularStd-Book;
   font-size: 16px;
 }
@@ -264,4 +264,12 @@ textarea:focus {
   font-family: CircularStd-Book;
   margin-top: 4px;
   font-size: 12px;
+}
+
+.comments .header {
+  font-size: 22px;
+}
+
+.comments textarea {
+  height: 100px;
 }
