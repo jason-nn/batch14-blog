@@ -1,6 +1,8 @@
 <div class="header-container">
   <div class="header">Articles</div>
-  <div class="subtext">View and manage all articles</div>
+  <div class="subtext">
+    <%= "#{@articles.length} articles" %>
+  </div>
   <button><%= link_to 'New Article', new_article_path %></button>
 </div>
 <div class="articles">

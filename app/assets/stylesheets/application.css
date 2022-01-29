@@ -279,6 +279,7 @@ textarea:focus {
   padding: 15px 0px;
   display: flex;
   border-top: 1px solid #f4f4f5;
+  position: relative;
 }
 
 .profile {
@@ -298,4 +299,11 @@ textarea:focus {
 .comment-body {
   font-family: CircularStd-Book;
   font-size: 16px;
+}
+
+.comment .delete {
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  bottom: 15px;
 }

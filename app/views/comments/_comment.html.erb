@@ -6,4 +6,9 @@
       <%= comment.body %>
     </div>
   </div>
+  <div class="delete">
+    <%= link_to "Delete", [comment.article, comment],
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  </div>
 </div>
