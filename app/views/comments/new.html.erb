@@ -1,0 +1,41 @@
+<div class="back">
+  <span class="material-icons">keyboard_arrow_left</span>
+  <%= link_to 'Back', article_path(@article) %>
+</div>
+<div class="comments">
+  <div class="card">
+    <div class="header-container">
+      <div class="header">Add comment</div>
+      <div class="subtext">Create a new comment</div>
+    </div>
+    <%= form_with model: [@article, @comment] do |form| %>
+      <div>
+        <p>
+          <%= form.label :commenter %>
+        </p>
+        <%= form.text_field :commenter %>
+        <% @comment.errors.full_messages_for(:commenter).each do |message| %>
+          <div class="error">
+            <%= message %>
+          </div>
+        <% end %>
+      </div>
+      <div class="spacing"></div>
+      <div>
+        <p>
+          <%= form.label :body %>
+        </p>
+        <%= form.text_area :body %>
+        <% @comment.errors.full_messages_for(:body).each do |message| %>
+          <div class="error">
+            <%= message %>
+          </div>
+        <% end %>
+      </div>
+      <div class="spacing"></div>
+      <div>
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>

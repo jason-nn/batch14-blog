@@ -1,12 +1,17 @@
 class CommentsController < ApplicationController
+  def new
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.new
+  end
+
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.new(comment_params)
 
-    if @article.save
+    if @comment.save
       redirect_to article_path(@article)
     else
-      redirect_to article_path(@article)
+      render :new, status: :unprocessable_entity
     end
   end
 
