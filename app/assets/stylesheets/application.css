@@ -39,10 +39,174 @@
   margin: 0;
   padding: 0;
 
-  color: #1d1d1f;
   scroll-behavior: smooth;
 }
 
-.error {
-  color: red;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: #4f42ec;
+  color: white;
+
+  font-family: CircularStd-Medium;
+  font-size: 15px;
+  padding: 0.7em 1.4em;
+
+  border: none;
+  border-radius: 4px;
+}
+
+.navbar {
+  width: 100vw;
+  height: 70px;
+
+  background-color: white;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px;
+}
+
+.navleft {
+  font-family: CircularStd-Black;
+  font-size: 40px;
+
+  color: #4f42ec;
+}
+
+.navright {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  font-family: CircularStd-Bold;
+  font-size: 16px;
+}
+
+.body {
+  width: 100vw;
+  min-height: calc(100vh - 70px);
+
+  background-color: #f9fafb;
+
+  margin-top: 70px;
+}
+
+.content {
+  width: 50vw;
+  margin: 0 auto;
+
+  padding-top: 30px;
+}
+
+.header {
+  font-family: CircularStd-Bold;
+  font-size: 30px;
+}
+
+.subtext {
+  font-family: CircularStd-Medium;
+  font-size: 14px;
+
+  color: #71717a;
+  margin-top: 10px;
+}
+
+.header-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.header-container button {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+}
+
+.articles {
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.articles-label {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  color: #71717a;
+  font-size: 11px;
+  font-family: CircularStd-Medium;
+}
+
+.article {
+  padding: 15px 30px;
+  border-top: 1px solid #f4f4f5;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: CircularStd-Bold;
+}
+
+.article p {
+  font-size: 16px;
+}
+
+.article a {
+  text-transform: uppercase;
+  color: #4f42ec;
+  font-size: 12px;
+}
+
+.back {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-family: CircularStd-Bold;
+  color: #71717a;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.back:hover {
+  color: #4f42ec;
+}
+
+.back span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.edit {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: CircularStd-Bold;
+  color: #4f42ec;
+}
+
+.delete {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: CircularStd-Bold;
+  color: #d43f3f;
+}
+
+.show-footer {
+  display: flex;
+  gap: 20px;
+}
+
+.article-body {
+  margin-bottom: 60px;
+  font-family: CircularStd-Book;
+  font-size: 16px;
 }
