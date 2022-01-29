@@ -32,17 +32,7 @@
       <div class="subtext">View and manage all comments</div>
       <button><%= link_to 'New Comment', new_article_comment_path(@article) %></button>
     </div>
-    <% @article.comments.each do |comment| %>
-      <div class="comment">
-        <div class="profile"></div>
-        <div>
-          <div class="name"><%= comment.commenter %></div>
-          <div class="comment-body">
-            <%= comment.body %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <%= render @article.comments %>
   </div>
 </div>
 <div class="spacing"></div>
