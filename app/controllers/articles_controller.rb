@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   http_basic_authenticate_with name: 'jason',
                                password: 'password',
-                               only: :destroy
+                               except: %i[index show]
 
   def index
     @articles = Article.all.order(id: :desc)
