@@ -13,13 +13,6 @@
   <div class="articles-label">
     <p>Article Title</p>
   </div>
-  <% @articles.each do |article| %>
-    <div class="article">
-      <p>
-        <%= article.title %>
-      </p>
-      <%= link_to 'View', article %>
-    </div>
-  <% end %>
+  <%= render @articles %>
 </div>
 <div class="spacing"></div>
